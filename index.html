@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World Title</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+
+  function Add(props){
+  console.log(props);
+ 
+  return(
+  <React.Fragment>
+  <h1>Hello Bangladesh {props.name}</h1>,
+  <Myage age={props.age}/>
+  </React.Fragment>
+
+  );
+
+     
+  }
+
+  function Myage(props){
+  return(<h2>My age is{props.age}</h2>);
+    }
+
+
+
+    class MyageClass extends React.Component{
+       render(){
+       var props=this.props;
+         return(<h2>My Componentage is {props.myage}</h2>);
+     }
+    }
+ReactDOM.render(
+
+
+<div>
+    <h1>Hello world</h1>
+    <h1>Hello world2</h1>,
+    <Add name="nizam" age="33"/>,
+      <Myage age="27"/>
+     <Add name="arafat"/>,
+       <Myage age="29"/>
+       <MyageClass myage="120" />
+
+</div>,
+  document.getElementById('root')
+);
+
+</script>
+
+
+</body>
+</html>
